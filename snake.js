@@ -1,4 +1,4 @@
-const BG_COLOUR = '#231f20';
+const BG_COLOUR =  '#231f20';
 const SNAKE_COLOUR = '#00D201';
 const FOOD_COLOUR = '#DB0E00';
 
@@ -20,7 +20,6 @@ function init(){
   snake = [
     {x: 10, y: 10},
   ]
-
   randomFood();
 }
 
@@ -38,6 +37,13 @@ function randomFood(){
     }
   }
 }
+
+//const playerScore = score;
+
+//function updateScore () {
+    
+    //document.getElementById('score').innerText = score;
+//}
 
 document.addEventListener('keydown', keydown);
 
@@ -86,6 +92,7 @@ function gameLoop(){
     pos.x += vel.x;
     pos.y += vel.y;
     randomFood();
+    //playerScore += 10;
   }
 
   if (vel.x || vel.y) {
@@ -98,3 +105,5 @@ function gameLoop(){
     snake.shift();
   }
 }
+//playerScore = 0;
+//playerScore = 0;
